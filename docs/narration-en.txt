@@ -2,6 +2,8 @@ Workday Inventory connects receiving, stock movements, and financial records. Th
 
 In this clip, the carton is opened. Jev Omni evaluates four possible observations directly, and ranks opening first. The percentages compare those answers; the source stays beside the result.
 
+We can also make the object boundary explicit. Here, SAM three point one tracks the carton and its moving flaps. The blue mask adds spatial evidence to the review packet. Jev uses the original video for its separate decision.
+
 Now we add the business context. The same photo could belong to an authorized contents inspection, where an open box is expected. Or it could be submitted as proof of the package's arrival condition. In that case, our example rule asks for an earlier photo, before the box was opened.
 
 The prototype keeps the selected action, the supplied rule, and the original evidence together. A receiver can review the packet and request the missing view before continuing the receiving process.

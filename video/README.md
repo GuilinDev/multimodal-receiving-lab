@@ -1,6 +1,6 @@
 # Editable technical film
 
-Twelve HyperFrames scenes follow a continuous 142-second English narration. The technical section is a schematic animation grounded in the actual model path; its lines are not attention maps or measured internal activations. The source imagery and scores are the recorded evidence cases.
+Thirteen HyperFrames scenes form a 156-second film with continuous English narration. A new scene at 00:29 shows real SAM 3.1 carton masks at half-speed playback. The technical diagram remains a schematic grounded in the actual model path; its lines are not attention maps or measured internal activations. The source imagery and scores are the recorded evidence cases.
 
 ## Prepare and render
 

@@ -17,6 +17,7 @@ Film music: [Ambient Piano / Ambient Technology, AudioDollar (Vladislav Litvinen
 ## Model and tools
 
 - [Jev-Omni](https://huggingface.co/akhilaaa3/Jev-Omni), akhilaaa3, pinned revision `5addda86ddee081a68fb067477ea100c221b8917`. Model weights and helper are downloaded separately under their upstream terms. The model card identifies Apache-2.0. Check the pinned repository and underlying model terms for your own use.
+- [SAM 3.1](https://huggingface.co/facebook/sam3.1), Meta, checkpoint revision `daa63191845a41281374e725f4c9e51c7a824460`. Its code and weights retain Meta's upstream terms; they are not relicensed or redistributed here. The additional overlay, sampled clip and preview derive from the same Polina Tankilevitch source credited above. The masks are recorded model outputs.
 - [HyperFrames](https://github.com/heygen-com/hyperframes) for the editable film. The technical connector animation adapts its constellation-hub draw pattern. GSAP is loaded during video setup under its own terms.
 - Montserrat and IBM Plex Mono fonts are resolved by the HyperFrames compiler and retain their font licenses.
 

@@ -1,0 +1,936 @@
+{
+  "model": "facebook/sam3.1",
+  "checkpoint_revision": "daa63191845a41281374e725f4c9e51c7a824460",
+  "sam_code_revision": "8f0b7f4d4e7eda2ed606ebde6702c93359ad01da",
+  "prompt": "cardboard box",
+  "source_sha256": "f220df62c10f29c85a53582593e81673ce42ae3e052a33620a3cd590c2a85aee",
+  "source_fps": 25.0,
+  "source_decoded_frames": 174,
+  "fps": 8,
+  "width": 1280,
+  "height": 720,
+  "processing_seconds": 28.39004656393081,
+  "timing_scope": "session initialization, prompt and propagation; excludes model load, rendering and Jev inference",
+  "torch": "2.13.0+cu130",
+  "frames": [
+    {
+      "frame": 0,
+      "time": 0.0,
+      "source_frame": 0,
+      "source_second": 0.0,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 279093,
+      "bbox": [
+        551,
+        304,
+        1265,
+        720
+      ]
+    },
+    {
+      "frame": 1,
+      "time": 0.125,
+      "source_frame": 4,
+      "source_second": 0.16,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 279762,
+      "bbox": [
+        552,
+        305,
+        1264,
+        720
+      ]
+    },
+    {
+      "frame": 2,
+      "time": 0.25,
+      "source_frame": 7,
+      "source_second": 0.28,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 281112,
+      "bbox": [
+        548,
+        305,
+        1265,
+        720
+      ]
+    },
+    {
+      "frame": 3,
+      "time": 0.375,
+      "source_frame": 10,
+      "source_second": 0.4,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 282021,
+      "bbox": [
+        546,
+        306,
+        1265,
+        720
+      ]
+    },
+    {
+      "frame": 4,
+      "time": 0.5,
+      "source_frame": 13,
+      "source_second": 0.52,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 281355,
+      "bbox": [
+        547,
+        307,
+        1267,
+        720
+      ]
+    },
+    {
+      "frame": 5,
+      "time": 0.625,
+      "source_frame": 16,
+      "source_second": 0.64,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 280471,
+      "bbox": [
+        550,
+        306,
+        1267,
+        720
+      ]
+    },
+    {
+      "frame": 6,
+      "time": 0.75,
+      "source_frame": 19,
+      "source_second": 0.76,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 279104,
+      "bbox": [
+        552,
+        306,
+        1265,
+        720
+      ]
+    },
+    {
+      "frame": 7,
+      "time": 0.875,
+      "source_frame": 22,
+      "source_second": 0.88,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 276489,
+      "bbox": [
+        555,
+        306,
+        1263,
+        720
+      ]
+    },
+    {
+      "frame": 8,
+      "time": 1.0,
+      "source_frame": 25,
+      "source_second": 1.0,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 276244,
+      "bbox": [
+        553,
+        306,
+        1259,
+        720
+      ]
+    },
+    {
+      "frame": 9,
+      "time": 1.125,
+      "source_frame": 29,
+      "source_second": 1.16,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 273943,
+      "bbox": [
+        558,
+        307,
+        1262,
+        720
+      ]
+    },
+    {
+      "frame": 10,
+      "time": 1.25,
+      "source_frame": 32,
+      "source_second": 1.28,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 274543,
+      "bbox": [
+        557,
+        306,
+        1260,
+        720
+      ]
+    },
+    {
+      "frame": 11,
+      "time": 1.375,
+      "source_frame": 35,
+      "source_second": 1.4,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 275029,
+      "bbox": [
+        559,
+        306,
+        1265,
+        720
+      ]
+    },
+    {
+      "frame": 12,
+      "time": 1.5,
+      "source_frame": 38,
+      "source_second": 1.52,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 277966,
+      "bbox": [
+        553,
+        306,
+        1263,
+        720
+      ]
+    },
+    {
+      "frame": 13,
+      "time": 1.625,
+      "source_frame": 41,
+      "source_second": 1.64,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 276378,
+      "bbox": [
+        557,
+        307,
+        1266,
+        720
+      ]
+    },
+    {
+      "frame": 14,
+      "time": 1.75,
+      "source_frame": 44,
+      "source_second": 1.76,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 275207,
+      "bbox": [
+        555,
+        306,
+        1262,
+        720
+      ]
+    },
+    {
+      "frame": 15,
+      "time": 1.875,
+      "source_frame": 47,
+      "source_second": 1.88,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 274594,
+      "bbox": [
+        557,
+        307,
+        1263,
+        720
+      ]
+    },
+    {
+      "frame": 16,
+      "time": 2.0,
+      "source_frame": 50,
+      "source_second": 2.0,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 275184,
+      "bbox": [
+        554,
+        306,
+        1260,
+        720
+      ]
+    },
+    {
+      "frame": 17,
+      "time": 2.125,
+      "source_frame": 54,
+      "source_second": 2.16,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 273719,
+      "bbox": [
+        556,
+        307,
+        1259,
+        720
+      ]
+    },
+    {
+      "frame": 18,
+      "time": 2.25,
+      "source_frame": 57,
+      "source_second": 2.28,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 273967,
+      "bbox": [
+        554,
+        308,
+        1258,
+        720
+      ]
+    },
+    {
+      "frame": 19,
+      "time": 2.375,
+      "source_frame": 60,
+      "source_second": 2.4,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 275821,
+      "bbox": [
+        552,
+        306,
+        1256,
+        720
+      ]
+    },
+    {
+      "frame": 20,
+      "time": 2.5,
+      "source_frame": 63,
+      "source_second": 2.52,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 270631,
+      "bbox": [
+        590,
+        305,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 21,
+      "time": 2.625,
+      "source_frame": 66,
+      "source_second": 2.64,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 279274,
+      "bbox": [
+        574,
+        302,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 22,
+      "time": 2.75,
+      "source_frame": 69,
+      "source_second": 2.76,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 277693,
+      "bbox": [
+        575,
+        302,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 23,
+      "time": 2.875,
+      "source_frame": 72,
+      "source_second": 2.88,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 272462,
+      "bbox": [
+        586,
+        303,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 24,
+      "time": 3.0,
+      "source_frame": 75,
+      "source_second": 3.0,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 278195,
+      "bbox": [
+        576,
+        297,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 25,
+      "time": 3.125,
+      "source_frame": 79,
+      "source_second": 3.16,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 277709,
+      "bbox": [
+        554,
+        298,
+        1264,
+        720
+      ]
+    },
+    {
+      "frame": 26,
+      "time": 3.25,
+      "source_frame": 82,
+      "source_second": 3.28,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 284876,
+      "bbox": [
+        562,
+        268,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 27,
+      "time": 3.375,
+      "source_frame": 85,
+      "source_second": 3.4,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 270097,
+      "bbox": [
+        565,
+        274,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 28,
+      "time": 3.5,
+      "source_frame": 88,
+      "source_second": 3.52,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 277460,
+      "bbox": [
+        557,
+        268,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 29,
+      "time": 3.625,
+      "source_frame": 91,
+      "source_second": 3.64,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 260843,
+      "bbox": [
+        565,
+        277,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 30,
+      "time": 3.75,
+      "source_frame": 94,
+      "source_second": 3.76,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 255719,
+      "bbox": [
+        557,
+        279,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 31,
+      "time": 3.875,
+      "source_frame": 97,
+      "source_second": 3.88,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 251747,
+      "bbox": [
+        560,
+        281,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 32,
+      "time": 4.0,
+      "source_frame": 100,
+      "source_second": 4.0,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 256400,
+      "bbox": [
+        560,
+        266,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 33,
+      "time": 4.125,
+      "source_frame": 104,
+      "source_second": 4.16,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 263636,
+      "bbox": [
+        557,
+        264,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 34,
+      "time": 4.25,
+      "source_frame": 107,
+      "source_second": 4.28,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 264848,
+      "bbox": [
+        559,
+        266,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 35,
+      "time": 4.375,
+      "source_frame": 110,
+      "source_second": 4.4,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 268307,
+      "bbox": [
+        557,
+        262,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 36,
+      "time": 4.5,
+      "source_frame": 113,
+      "source_second": 4.52,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 274130,
+      "bbox": [
+        550,
+        249,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 37,
+      "time": 4.625,
+      "source_frame": 116,
+      "source_second": 4.64,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 274867,
+      "bbox": [
+        558,
+        248,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 38,
+      "time": 4.75,
+      "source_frame": 119,
+      "source_second": 4.76,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 293543,
+      "bbox": [
+        574,
+        203,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 39,
+      "time": 4.875,
+      "source_frame": 122,
+      "source_second": 4.88,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 294405,
+      "bbox": [
+        578,
+        198,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 40,
+      "time": 5.0,
+      "source_frame": 125,
+      "source_second": 5.0,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 331364,
+      "bbox": [
+        580,
+        106,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 41,
+      "time": 5.125,
+      "source_frame": 129,
+      "source_second": 5.16,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 358850,
+      "bbox": [
+        582,
+        38,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 42,
+      "time": 5.25,
+      "source_frame": 132,
+      "source_second": 5.28,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 367155,
+      "bbox": [
+        585,
+        22,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 43,
+      "time": 5.375,
+      "source_frame": 135,
+      "source_second": 5.4,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 358076,
+      "bbox": [
+        596,
+        36,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 44,
+      "time": 5.5,
+      "source_frame": 138,
+      "source_second": 5.52,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 376936,
+      "bbox": [
+        580,
+        33,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 45,
+      "time": 5.625,
+      "source_frame": 141,
+      "source_second": 5.64,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 377146,
+      "bbox": [
+        583,
+        36,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 46,
+      "time": 5.75,
+      "source_frame": 144,
+      "source_second": 5.76,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 375603,
+      "bbox": [
+        587,
+        39,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 47,
+      "time": 5.875,
+      "source_frame": 147,
+      "source_second": 5.88,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 378479,
+      "bbox": [
+        582,
+        43,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 48,
+      "time": 6.0,
+      "source_frame": 150,
+      "source_second": 6.0,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 375306,
+      "bbox": [
+        573,
+        59,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 49,
+      "time": 6.125,
+      "source_frame": 154,
+      "source_second": 6.16,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 344108,
+      "bbox": [
+        558,
+        128,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 50,
+      "time": 6.25,
+      "source_frame": 157,
+      "source_second": 6.28,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 302278,
+      "bbox": [
+        551,
+        181,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 51,
+      "time": 6.375,
+      "source_frame": 160,
+      "source_second": 6.4,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 292217,
+      "bbox": [
+        543,
+        224,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 52,
+      "time": 6.5,
+      "source_frame": 163,
+      "source_second": 6.52,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 298419,
+      "bbox": [
+        502,
+        221,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 53,
+      "time": 6.625,
+      "source_frame": 166,
+      "source_second": 6.64,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 305042,
+      "bbox": [
+        485,
+        223,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 54,
+      "time": 6.75,
+      "source_frame": 169,
+      "source_second": 6.76,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 308801,
+      "bbox": [
+        494,
+        225,
+        1280,
+        720
+      ]
+    },
+    {
+      "frame": 55,
+      "time": 6.875,
+      "source_frame": 172,
+      "source_second": 6.88,
+      "object_ids": [
+        0
+      ],
+      "mask_pixels": 305427,
+      "bbox": [
+        491,
+        225,
+        1280,
+        720
+      ]
+    }
+  ],
+  "visualization": {
+    "mask_alpha": 0.48,
+    "bgr": [
+      240,
+      145,
+      25
+    ],
+    "contours": "binary mask external boundaries",
+    "roi_xyxy": [
+      453,
+      0,
+      1280,
+      720
+    ],
+    "roi_method": "fixed union bounding rectangle over all masks, 32px padding, original RGB content, aspect-preserving letterbox to source size",
+    "mask_used_for_jev": "only rectangle coordinates; no colored overlay sent to Jev",
+    "files": {
+      "sampled.mp4": "352544e57d23cf476f677069836f7db0e5cf6a20e38ba41717016bb81ec54726",
+      "overlay.mp4": "bb3339b60cc473990c22e456c32a24ae80e64823bb965c1e2be245c95c69ef36",
+      "binary-mask.mp4": "00a2e7233d3b9a31998f072c63299826f651a3a346281a0d7d129609a33969ca",
+      "roi.mp4": "5a7bfeac417ac064ac0788b6f35248bbb0213c6b540928137394820ffa373e4f"
+    }
+  }
+}

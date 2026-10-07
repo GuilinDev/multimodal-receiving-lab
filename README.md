@@ -4,7 +4,7 @@ Turn a receiving photo or short clip into **a specific observation, a context-de
 
 This learning project explores a visual evidence step alongside [Workday Inventory](https://www.workday.com/en-us/products/spend-management/inventory.html). Its [official datasheet](https://www.workday.com/content/dam/web/en-us/documents/datasheets/datasheet-inventory.pdf) describes barcode-enabled receiving, movements, traceability and links to financial records. The experiment asks what visual evidence could add to that workflow.
 
-**[Watch the narrated technical demo](https://github.com/GuilinDev/multimodal-receiving-lab/releases/tag/v1.0.0)** · [Technical walkthrough](docs/technology.md) · [Evaluation](docs/evaluation.md)
+**[Watch the narrated technical demo](https://github.com/GuilinDev/multimodal-receiving-lab/releases/tag/v1.1.0)** · [Technical walkthrough](docs/technology.md) · [SAM 3.1 masks](docs/segmentation.md) · [Evaluation](docs/evaluation.md)
 
 ![Interactive receiving evidence review](docs/review-preview.png)
 
@@ -21,6 +21,10 @@ python -m http.server 8000 --bind 127.0.0.1
 Open **http://127.0.0.1:8000/app/**. Switch between arrival condition and authorized inspection, confirm or override the proposed next step, and export a JSON review packet. Review actions stay in your browser; switching stages resets the pending decision. Nothing is sent to a Workday tenant.
 
 The included media are transformed evidence fixtures from credited public stock clips, packaged with the case questions and results. They show normal handling, not a damaged delivery. See [source details](NOTICE.md).
+
+The **SAM 3.1 masks** tab adds real text-prompted segmentation of the carton and its moving flaps. Toggle between the blue overlay and source frames. All 56 binary masks and frame records are included. SAM provides object geometry; Jev's recorded decisions still use the original inputs. [How the two outputs relate](docs/segmentation.md).
+
+![Actual SAM 3.1 carton mask](assets/sam-preview.jpg)
 
 ## The experiment
 
@@ -69,8 +73,8 @@ The eight examples are learning probes, not a representative inventory evaluatio
 | Path | Purpose |
 | --- | --- |
 | `app/` | Static, interactive recorded-results reviewer |
-| `assets/` | Four exact evidence fixtures |
-| `data/` | Prompts, complete score vectors, model revision and source provenance |
+| `assets/` | Exact evidence fixtures and paired SAM/source playback |
+| `data/` | Prompts, complete score vectors, 56 binary masks and source provenance |
 | `scripts/` | Recorded/live evaluation and optional GPU inference |
 | `tests/` | Evidence, pair integrity and response-validation tests |
 | `docs/` | Technology, evaluation, setup and continuous narration |

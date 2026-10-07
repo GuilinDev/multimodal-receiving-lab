@@ -1,6 +1,6 @@
 {
-  "total": 142.36666666666667,
-  "voice_end": 140.76,
+  "total": 156.26666666666668,
+  "voice_end": 154.656,
   "scenes": [
     {
       "id": "inv-opening",
@@ -18,49 +18,54 @@
       "duration": 12.303916999999998
     },
     {
-      "id": "inv-context",
+      "id": "inv-sam",
       "start": 28.708833,
-      "duration": 7.573500000000003
+      "duration": 13.897041999999999
+    },
+    {
+      "id": "inv-context",
+      "start": 42.605875,
+      "duration": 7.573540999999999
     },
     {
       "id": "inv-arrival",
-      "start": 36.282333,
-      "duration": 8.737749999999998
+      "start": 50.179415999999996,
+      "duration": 8.737750000000005
     },
     {
       "id": "inv-packet",
-      "start": 45.020083,
-      "duration": 11.299042
+      "start": 58.917166,
+      "duration": 11.299
     },
     {
       "id": "inv-compare",
-      "start": 56.319125,
-      "duration": 13.688708000000005
+      "start": 70.216166,
+      "duration": 13.688749999999999
     },
     {
       "id": "inv-frames",
-      "start": 70.007833,
-      "duration": 11.139707999999999
+      "start": 83.904916,
+      "duration": 11.13970900000001
     },
     {
       "id": "inv-head",
-      "start": 81.147541,
-      "duration": 15.183834000000004
+      "start": 95.04462500000001,
+      "duration": 15.183791
     },
     {
       "id": "inv-weak",
-      "start": 96.33137500000001,
-      "duration": 16.421583
+      "start": 110.22841600000001,
+      "duration": 16.421583999999996
     },
     {
       "id": "inv-speed",
-      "start": 112.752958,
+      "start": 126.65,
       "duration": 9.301457999999997
     },
     {
       "id": "inv-close",
-      "start": 122.054416,
-      "duration": 20.31225066666667
+      "start": 135.951458,
+      "duration": 20.315208666666678
     }
   ]
 }

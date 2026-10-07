@@ -10,6 +10,8 @@ Technically, it uses Jev-Omni, an independent open multimodal classifier. If you
 
 In our implementation, a seven-second clip becomes 16 sampled frames. A vision encoder and language backbone process the images together with the question, context and candidate answers; a learned classification head scores those options in one forward pass. Softmax produces the relative percentages. A generative VLM would typically decode an answer token by token. This path has no answer-token generation, although processing the visual input still takes computation. The animation in the video walks through that distinction.
 
+The demo also runs Meta's SAM 3.1 on the carton. Its tracked masks show the object boundary and moving flaps, adding spatial evidence to the review packet. SAM segmentation and Jev classification are separate outputs; the mask is not an attention map or an explanation of Jev's internal reasoning. The repo includes all 56 binary masks and the frame records.
+
 My main takeaway is about evaluation and explainability. Can the recommendation change appropriately when only the context changes? Can it recognize when the view is insufficient? One restricted crop still received an 80.4% closed-carton score. I kept that failure in the repo. The evidence packet makes the inputs and decision traceable; it doesn't reveal the model's internal reasoning or turn a score into a guarantee.
 
 Video and learning repo: https://github.com/GuilinDev/multimodal-receiving-lab

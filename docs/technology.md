@@ -39,3 +39,5 @@ The restricted-view case is why the distinction matters. A high score cannot sup
 ## What is explainable here?
 
 The evidence packet shows the input, options, complete score vector, supplied rule, source hash, model revision and human action. A reader can reconstruct what was asked and compare controlled changes. This is workflow traceability and behavioral evaluation. It is not a causal account of the model's internal reasoning, and the on-screen architecture animation is a schematic, not a measured attention visualization.
+
+The [SAM 3.1 extension](segmentation.md) adds actual object masks as a separate spatial result. Its overlay is not Jev attention and did not generate the published Jev scores.

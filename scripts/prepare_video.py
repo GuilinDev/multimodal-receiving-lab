@@ -29,7 +29,10 @@ def main():
     ff('-ss',1.5,'-i',A/'label-macro.mp4','-frames:v',1,'-pix_fmt','yuvj420p',A/'label-macro.jpg')
     for j,t in enumerate([0,1.84,3.68,5.56,6.8]):
         ff('-ss',t,'-i',A/'opening.mp4','-frames:v',1,'-pix_fmt','yuvj420p',A/f'frame-{j}.jpg')
-    ff('-i',R/'assets/narration-en.mp3','-af','loudnorm=I=-16:TP=-1.5:LRA=9','-ar','48000',B/'inventory-v3.wav')
+    for name in ['sam-overlay.mp4','sam-source.mp4','sam-binary.mp4']:shutil.copy2(R/'assets'/name,A/name)
+    for name in ['sam-overlay','sam-binary']:
+        ff('-sseof',-.25,'-i',A/f'{name}.mp4','-frames:v',1,'-pix_fmt','yuvj420p',A/f'{name}.jpg')
+    ff('-i',R/'assets/narration-en.mp3','-af','loudnorm=I=-16:TP=-1.5:LRA=9','-ar','48000',B/'inventory-v4.wav')
     shutil.copy2(gsap,R/'video/assets/gsap.min.js')
     print('Video assets prepared. Run npm run check from the video directory.')
 if __name__=='__main__':main()
