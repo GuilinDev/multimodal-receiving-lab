@@ -1,0 +1,259 @@
+1
+00:00:00,498 --> 00:00:03,929
+Workday Inventory connects receiving, stock movements, and
+
+2
+00:00:03,929 --> 00:00:05,197
+financial records.
+
+3
+00:00:05,363 --> 00:00:08,243
+This prototype explores how visual evidence could
+
+4
+00:00:08,243 --> 00:00:10,638
+help a receiving team review a delivery.
+
+5
+00:00:10,792 --> 00:00:12,880
+A barcode identifies the item.
+
+6
+00:00:13,035 --> 00:00:14,579
+A short video adds a view of
+
+7
+00:00:14,579 --> 00:00:16,250
+its packaging and handling.
+
+8
+00:00:16,405 --> 00:00:18,444
+In this clip, the carton is opened.
+
+9
+00:00:18,599 --> 00:00:22,562
+Jev Omni evaluates four possible observations directly,
+
+10
+00:00:22,618 --> 00:00:24,143
+and ranks opening first.
+
+11
+00:00:24,297 --> 00:00:26,483
+The percentages compare those answers;
+
+12
+00:00:26,515 --> 00:00:28,554
+the source stays beside the result.
+
+13
+00:00:28,709 --> 00:00:30,503
+Now we add the business context.
+
+14
+00:00:30,670 --> 00:00:32,349
+The same photo could belong to an
+
+15
+00:00:32,349 --> 00:00:35,192
+authorized contents inspection, where an open box
+
+16
+00:00:35,192 --> 00:00:36,128
+is expected.
+
+17
+00:00:36,282 --> 00:00:37,924
+Or it could be submitted as proof
+
+18
+00:00:37,924 --> 00:00:39,768
+of the package's arrival condition.
+
+19
+00:00:39,922 --> 00:00:42,067
+In that case, our example rule asks
+
+20
+00:00:42,067 --> 00:00:44,089
+for an earlier photo, before the box
+
+21
+00:00:44,089 --> 00:00:44,853
+was opened.
+
+22
+00:00:45,020 --> 00:00:47,361
+The prototype keeps the selected action, the
+
+23
+00:00:47,361 --> 00:00:50,270
+supplied rule, and the original evidence together.
+
+24
+00:00:50,424 --> 00:00:52,336
+A receiver can review the packet and
+
+25
+00:00:52,336 --> 00:00:54,812
+request the missing view before continuing the
+
+26
+00:00:54,812 --> 00:00:56,152
+receiving process.
+
+27
+00:00:56,319 --> 00:00:58,125
+Here is how the technology works.
+
+28
+00:00:58,280 --> 00:01:01,540
+TypeSafe's original Jev turns text and structured
+
+29
+00:01:01,540 --> 00:01:03,750
+questions into typed decisions.
+
+30
+00:01:03,905 --> 00:01:06,491
+Jev Omni is an independent open model
+
+31
+00:01:06,491 --> 00:01:09,076
+with a similar decision interface and multimodal
+
+32
+00:01:09,076 --> 00:01:09,853
+inputs.
+
+33
+00:01:10,008 --> 00:01:12,709
+Our video path samples sixteen frames.
+
+34
+00:01:12,863 --> 00:01:15,437
+Those images enter a vision encoder, then
+
+35
+00:01:15,437 --> 00:01:17,839
+a shared language backbone processes them with
+
+36
+00:01:17,839 --> 00:01:20,993
+the question, context, and candidate answers.
+
+37
+00:01:21,148 --> 00:01:23,733
+A classification head scores the options in
+
+38
+00:01:23,733 --> 00:01:25,074
+one forward pass.
+
+39
+00:01:25,241 --> 00:01:28,010
+Softmax converts those scores into the percentages
+
+40
+00:01:28,010 --> 00:01:28,898
+we display.
+
+41
+00:01:29,064 --> 00:01:31,037
+This avoids generating an answer word by
+
+42
+00:01:31,037 --> 00:01:31,630
+word.
+
+43
+00:01:31,797 --> 00:01:33,709
+The result is easy for software to
+
+44
+00:01:33,709 --> 00:01:36,177
+route and for a reviewer to inspect.
+
+45
+00:01:36,331 --> 00:01:38,819
+The important evaluation question is whether that
+
+46
+00:01:38,819 --> 00:01:41,202
+decision is supported by the evidence.
+
+47
+00:01:41,356 --> 00:01:43,635
+In this restricted crop, the model gave
+
+48
+00:01:43,635 --> 00:01:46,160
+closed carton eighty percent, although the full
+
+49
+00:01:46,160 --> 00:01:47,562
+closure was out of view.
+
+50
+00:01:47,716 --> 00:01:49,775
+A strong score can still accompany weak
+
+51
+00:01:49,775 --> 00:01:50,540
+evidence.
+
+52
+00:01:50,706 --> 00:01:52,586
+That case stays in the test set.
+
+53
+00:01:52,753 --> 00:01:54,983
+The seven-second clip took about three point
+
+54
+00:01:54,983 --> 00:01:58,623
+three seconds, including preprocessing and local GPU
+
+55
+00:01:58,623 --> 00:01:59,449
+inference.
+
+56
+00:01:59,603 --> 00:02:01,111
+Image calls took around a quarter of
+
+57
+00:02:01,111 --> 00:02:01,826
+a second.
+
+58
+00:02:02,054 --> 00:02:04,579
+For a receiving workflow, the opportunity is
+
+59
+00:02:04,579 --> 00:02:07,594
+a compact evidence check: identify the item,
+
+60
+00:02:07,594 --> 00:02:10,241
+inspect the visible condition, apply the capture
+
+61
+00:02:10,241 --> 00:02:12,324
+context, and give the receiver a clear
+
+62
+00:02:12,324 --> 00:02:13,211
+next step.
+
+63
+00:02:13,378 --> 00:02:16,356
+The learning repository includes the prompts, recorded
+
+64
+00:02:16,356 --> 00:02:19,260
+results, and this review prototype so others
+
+65
+00:02:19,260 --> 00:02:21,140
+can explore the same questions.

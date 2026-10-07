@@ -1,0 +1,270 @@
+{
+  "model": "akhilaaa3/Jev-Omni",
+  "revision": "5addda86ddee081a68fb067477ea100c221b8917",
+  "purpose": "Receiving evidence prototype; no Workday connection or inventory writes",
+  "cases": [
+    {
+      "id": "closed",
+      "file": "closed.jpg",
+      "payload": {
+        "state": "Judge only visible closure state. Do not infer damage, tampering, contents, or closure from a shipping label.",
+        "question": "What is the visible closure state of the main carton?",
+        "options": [
+          "The main carton is closed",
+          "The main carton is open",
+          "The closure of the main carton cannot be assessed from this view"
+        ],
+        "modality": "image"
+      },
+      "sha256": "45dd40dd35b2330f5dcb2d08cb9d62f3715b41152ec97ee1093bd8f9a73dea24",
+      "wall_seconds": 0.24932003999128938,
+      "output": {
+        "prediction": "The main carton is closed",
+        "prediction_index": 0,
+        "confidence": 0.8689537048339844,
+        "probabilities": {
+          "The main carton is closed": 0.8689537048339844,
+          "The main carton is open": 0.11921894550323486,
+          "The closure of the main carton cannot be assessed from this view": 0.01182735338807106
+        },
+        "elapsed_ms": 230.1,
+        "timing_scope": "preprocessing + GPU inference; excludes upload and model loading",
+        "input_tokens": 375,
+        "modality": "image",
+        "score_notice": "Relative option softmax; not calibrated for inventory decisions."
+      }
+    },
+    {
+      "id": "open",
+      "file": "open.jpg",
+      "payload": {
+        "state": "Judge only visible closure state. Do not infer damage, tampering, contents, or closure from a shipping label.",
+        "question": "What is the visible closure state of the main carton?",
+        "options": [
+          "The main carton is closed",
+          "The main carton is open",
+          "The closure of the main carton cannot be assessed from this view"
+        ],
+        "modality": "image"
+      },
+      "sha256": "61d244aed93960160cf46fc682589e2bdb1418e936f4a048eb4547622408473f",
+      "wall_seconds": 0.23024608986452222,
+      "output": {
+        "prediction": "The main carton is open",
+        "prediction_index": 1,
+        "confidence": 0.9755934476852417,
+        "probabilities": {
+          "The main carton is closed": 0.017729561775922775,
+          "The main carton is open": 0.9755934476852417,
+          "The closure of the main carton cannot be assessed from this view": 0.0066770147532224655
+        },
+        "elapsed_ms": 227.7,
+        "timing_scope": "preprocessing + GPU inference; excludes upload and model loading",
+        "input_tokens": 375,
+        "modality": "image",
+        "score_notice": "Relative option softmax; not calibrated for inventory decisions."
+      }
+    },
+    {
+      "id": "restricted",
+      "file": "restricted.jpg",
+      "payload": {
+        "state": "Judge only visible closure state. Do not infer damage, tampering, contents, or closure from a shipping label.",
+        "question": "What is the visible closure state of the main carton?",
+        "options": [
+          "The main carton is closed",
+          "The main carton is open",
+          "The closure of the main carton cannot be assessed from this view"
+        ],
+        "modality": "image"
+      },
+      "sha256": "7234b75fce67f3991bcb6abea22b70273b46c3cf7c33f30a3718ec1669d040ee",
+      "wall_seconds": 0.22438062797300518,
+      "output": {
+        "prediction": "The main carton is closed",
+        "prediction_index": 0,
+        "confidence": 0.8043164014816284,
+        "probabilities": {
+          "The main carton is closed": 0.8043164014816284,
+          "The main carton is open": 0.1466199904680252,
+          "The closure of the main carton cannot be assessed from this view": 0.04906361177563667
+        },
+        "elapsed_ms": 221.99,
+        "timing_scope": "preprocessing + GPU inference; excludes upload and model loading",
+        "input_tokens": 361,
+        "modality": "image",
+        "score_notice": "Relative option softmax; not calibrated for inventory decisions."
+      }
+    },
+    {
+      "id": "opening-video",
+      "file": "opening.mp4",
+      "payload": {
+        "state": "Describe only the visible change to the carton in the clip.",
+        "question": "What happens to the main carton during the video?",
+        "options": [
+          "It is opened during the clip",
+          "It is closed during the clip",
+          "It remains closed throughout",
+          "The change cannot be determined"
+        ],
+        "modality": "video",
+        "video_frames": 16
+      },
+      "sha256": "f220df62c10f29c85a53582593e81673ce42ae3e052a33620a3cd590c2a85aee",
+      "wall_seconds": 3.273778764065355,
+      "output": {
+        "prediction": "It is opened during the clip",
+        "prediction_index": 0,
+        "confidence": 0.9942659735679626,
+        "probabilities": {
+          "It is opened during the clip": 0.9942659735679626,
+          "It is closed during the clip": 0.0021245654206722975,
+          "It remains closed throughout": 0.0008385171531699598,
+          "The change cannot be determined": 0.0027709559071809053
+        },
+        "elapsed_ms": 3263.75,
+        "timing_scope": "preprocessing + GPU inference; excludes upload and model loading",
+        "input_tokens": 4356,
+        "modality": "video",
+        "score_notice": "Relative option softmax; not calibrated for inventory decisions."
+      }
+    },
+    {
+      "id": "context-arrival",
+      "file": "open.jpg",
+      "payload": {
+        "state": "This is a prototype receiving workflow. The capture stage was supplied by the receiver. Capture stage: ARRIVAL CONDITION, before authorized opening. Rule: if the arrival photo shows an open carton, request an earlier arrival photo showing its closure before opening. A visibly closed carton can be reviewed normally. If closure cannot be assessed, request a wider photo. Do not infer how a carton became open.",
+        "question": "Which next step follows the supplied capture stage, rule, and visible photo?",
+        "options": [
+          "Request an earlier arrival photo showing the carton before opening",
+          "Retain this photo as evidence of the authorized contents inspection",
+          "Continue normal review of the closed-carton evidence",
+          "Request a wider photo because the carton closure cannot be assessed"
+        ],
+        "modality": "image"
+      },
+      "sha256": "61d244aed93960160cf46fc682589e2bdb1418e936f4a048eb4547622408473f",
+      "wall_seconds": 0.26601051399484277,
+      "output": {
+        "prediction": "Request an earlier arrival photo showing the carton before opening",
+        "prediction_index": 0,
+        "confidence": 0.9781213998794556,
+        "probabilities": {
+          "Request an earlier arrival photo showing the carton before opening": 0.9781213998794556,
+          "Retain this photo as evidence of the authorized contents inspection": 0.008528780192136765,
+          "Continue normal review of the closed-carton evidence": 0.0008919312967918813,
+          "Request a wider photo because the carton closure cannot be assessed": 0.012457869946956635
+        },
+        "elapsed_ms": 263.67,
+        "timing_scope": "preprocessing + GPU inference; excludes upload and model loading",
+        "input_tokens": 458,
+        "modality": "image",
+        "score_notice": "Relative option softmax; not calibrated for inventory decisions."
+      }
+    },
+    {
+      "id": "context-inspection",
+      "file": "open.jpg",
+      "payload": {
+        "state": "This is a prototype receiving workflow. The capture stage was supplied by the receiver. Capture stage: AUTHORIZED CONTENTS INSPECTION. Rule: an open carton is expected during this stage; retain the photo as inspection evidence. A visibly closed carton can be reviewed normally. If closure cannot be assessed, request a wider photo. Do not request an earlier arrival photo solely because this inspection photo shows an open carton.",
+        "question": "Which next step follows the supplied capture stage, rule, and visible photo?",
+        "options": [
+          "Request an earlier arrival photo showing the carton before opening",
+          "Retain this photo as evidence of the authorized contents inspection",
+          "Continue normal review of the closed-carton evidence",
+          "Request a wider photo because the carton closure cannot be assessed"
+        ],
+        "modality": "image"
+      },
+      "sha256": "61d244aed93960160cf46fc682589e2bdb1418e936f4a048eb4547622408473f",
+      "wall_seconds": 0.26921092718839645,
+      "output": {
+        "prediction": "Retain this photo as evidence of the authorized contents inspection",
+        "prediction_index": 1,
+        "confidence": 0.9974640607833862,
+        "probabilities": {
+          "Request an earlier arrival photo showing the carton before opening": 0.0005516817909665406,
+          "Retain this photo as evidence of the authorized contents inspection": 0.9974640607833862,
+          "Continue normal review of the closed-carton evidence": 0.0003243169921915978,
+          "Request a wider photo because the carton closure cannot be assessed": 0.0016599352238699794
+        },
+        "elapsed_ms": 266.36,
+        "timing_scope": "preprocessing + GPU inference; excludes upload and model loading",
+        "input_tokens": 460,
+        "modality": "image",
+        "score_notice": "Relative option softmax; not calibrated for inventory decisions."
+      }
+    },
+    {
+      "id": "context-arrival-closed",
+      "file": "closed.jpg",
+      "payload": {
+        "state": "This is a prototype receiving workflow. The capture stage was supplied by the receiver. Capture stage: ARRIVAL CONDITION, before authorized opening. Rule: if the arrival photo shows an open carton, request an earlier arrival photo showing its closure before opening. A visibly closed carton can be reviewed normally. If closure cannot be assessed, request a wider photo. Do not infer how a carton became open.",
+        "question": "Which next step follows the supplied capture stage, rule, and visible photo?",
+        "options": [
+          "Request an earlier arrival photo showing the carton before opening",
+          "Retain this photo as evidence of the authorized contents inspection",
+          "Continue normal review of the closed-carton evidence",
+          "Request a wider photo because the carton closure cannot be assessed"
+        ],
+        "modality": "image"
+      },
+      "sha256": "45dd40dd35b2330f5dcb2d08cb9d62f3715b41152ec97ee1093bd8f9a73dea24",
+      "wall_seconds": 0.26975144585594535,
+      "output": {
+        "prediction": "Continue normal review of the closed-carton evidence",
+        "prediction_index": 2,
+        "confidence": 0.5324140787124634,
+        "probabilities": {
+          "Request an earlier arrival photo showing the carton before opening": 0.11810359358787537,
+          "Retain this photo as evidence of the authorized contents inspection": 0.10524887591600418,
+          "Continue normal review of the closed-carton evidence": 0.5324140787124634,
+          "Request a wider photo because the carton closure cannot be assessed": 0.24423348903656006
+        },
+        "elapsed_ms": 267.34,
+        "timing_scope": "preprocessing + GPU inference; excludes upload and model loading",
+        "input_tokens": 458,
+        "modality": "image",
+        "score_notice": "Relative option softmax; not calibrated for inventory decisions."
+      }
+    },
+    {
+      "id": "context-arrival-restricted",
+      "file": "restricted.jpg",
+      "payload": {
+        "state": "This is a prototype receiving workflow. The capture stage was supplied by the receiver. Capture stage: ARRIVAL CONDITION, before authorized opening. Rule: if the arrival photo shows an open carton, request an earlier arrival photo showing its closure before opening. A visibly closed carton can be reviewed normally. If closure cannot be assessed, request a wider photo. Do not infer how a carton became open.",
+        "question": "Which next step follows the supplied capture stage, rule, and visible photo?",
+        "options": [
+          "Request an earlier arrival photo showing the carton before opening",
+          "Retain this photo as evidence of the authorized contents inspection",
+          "Continue normal review of the closed-carton evidence",
+          "Request a wider photo because the carton closure cannot be assessed"
+        ],
+        "modality": "image"
+      },
+      "sha256": "7234b75fce67f3991bcb6abea22b70273b46c3cf7c33f30a3718ec1669d040ee",
+      "wall_seconds": 0.26588617684319615,
+      "output": {
+        "prediction": "Request a wider photo because the carton closure cannot be assessed",
+        "prediction_index": 3,
+        "confidence": 0.808422863483429,
+        "probabilities": {
+          "Request an earlier arrival photo showing the carton before opening": 0.11332292854785919,
+          "Retain this photo as evidence of the authorized contents inspection": 0.02508898638188839,
+          "Continue normal review of the closed-carton evidence": 0.05316527932882309,
+          "Request a wider photo because the carton closure cannot be assessed": 0.808422863483429
+        },
+        "elapsed_ms": 263.6,
+        "timing_scope": "preprocessing + GPU inference; excludes upload and model loading",
+        "input_tokens": 444,
+        "modality": "image",
+        "score_notice": "Relative option softmax; not calibrated for inventory decisions."
+      }
+    }
+  ],
+  "provenance": {
+    "normalization": "Only the unrelated legacy score_notice wording was replaced. Inputs, predictions, all probabilities, timings and evidence hashes are unchanged.",
+    "experiment": "8 single recorded requests; not an accuracy or latency benchmark."
+  }
+}

@@ -1,0 +1,22 @@
+I've been experimenting with a visual evidence check for a receiving workflow: could a photo or short clip help the person reviewing a delivery decide what evidence to request next?
+
+Workday Inventory is a concrete setting for that question. It already supports barcode-enabled receiving, stock movements and traceability, with inventory linked to financial records. These two official references helped me understand the scope:
+Product: https://www.workday.com/en-us/products/spend-management/inventory.html
+Datasheet: https://www.workday.com/content/dam/web/en-us/documents/datasheets/datasheet-inventory.pdf
+
+The demo follows one delivery from a visible barcode/QR label to a packaging observation and a reviewable next step. The same open-carton photo produces different recommendations under two supplied capture stages: authorized contents inspection versus evidence of arrival condition.
+
+Technically, it uses Jev-Omni, an independent open multimodal classifier. If you've seen TypeSafe's original text Jev, the shared idea is to ask a bounded question and receive structured decisions and probabilities. Jev-Omni is a separate project, not TypeSafe's official multimodal upgrade, and its training and calibration should not be assumed to match Jev's.
+
+In our implementation, a seven-second clip becomes 16 sampled frames. A vision encoder and language backbone process the images together with the question, context and candidate answers; a learned classification head scores those options in one forward pass. Softmax produces the relative percentages. A generative VLM would typically decode an answer token by token. This path has no answer-token generation, although processing the visual input still takes computation. The animation in the video walks through that distinction.
+
+My main takeaway is about evaluation and explainability. Can the recommendation change appropriately when only the context changes? Can it recognize when the view is insufficient? One restricted crop still received an 80.4% closed-carton score. I kept that failure in the repo. The evidence packet makes the inputs and decision traceable; it doesn't reveal the model's internal reasoning or turn a score into a guarantee.
+
+Video and learning repo: https://github.com/GuilinDev/multimodal-receiving-lab
+The repo includes an interactive recorded-results demo, exact prompts, all eight results, evaluation exercises and an optional GPU runner. The demo itself needs no GPU or API key.
+
+This is a personal prototype using public stock footage, with no Workday tenant connection. I'd welcome feedback from colleagues close to Inventory: where would visual evidence help a receiver, and what cases should an evaluation include?
+
+Technical references:
+TypeSafe Jev: https://docs.typesafe.ai/introduction
+Independent Jev-Omni: https://huggingface.co/akhilaaa3/Jev-Omni

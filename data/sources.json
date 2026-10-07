@@ -1,0 +1,80 @@
+{
+  "sources": [
+    {
+      "id": "7287316",
+      "author": "Kampus Production",
+      "page": "https://www.pexels.com/video/woman-taking-photo-of-the-qr-code-on-the-box-7287316/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "sha256": "6be96604f634331797077b770a33235b5d52186a5210139341fc03ff9da5ec15"
+    },
+    {
+      "id": "7835166",
+      "author": "Kampus Production",
+      "page": "https://www.pexels.com/video/a-delivery-man-checking-a-parcels-barcode-7835166/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "sha256": "9d751b40efe5b8a701b1613ac5206c30b10f9050a617621a9ff4c72acaf25457"
+    },
+    {
+      "id": "7855154",
+      "author": "Kampus Production",
+      "page": "https://www.pexels.com/video/a-seller-packing-the-purchase-order-7855154/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "sha256": "7c7ec5bfbe61d747540c6bc8f2fb7e5f44a3322869510862e3f99b88c6235c58"
+    },
+    {
+      "id": "4440949",
+      "author": "Polina Tankilevitch",
+      "page": "https://www.pexels.com/video/boxes-post-delivery-delivery-man-4440949/",
+      "license": "Pexels License",
+      "license_url": "https://www.pexels.com/license/",
+      "sha256": "bb225edcdd4ae0f2d84fcff4634aaf9204e5d0cf5df3c01cde36d35f667261fc"
+    }
+  ],
+  "evidence": {
+    "closed": {
+      "source": "7855154",
+      "second": 8
+    },
+    "open": {
+      "source": "4440949",
+      "second": 6.8
+    },
+    "restricted": {
+      "source": "closed.jpg",
+      "crop": [
+        470,
+        345,
+        420,
+        180
+      ]
+    },
+    "opening": {
+      "source": "4440949",
+      "range_seconds": [
+        0,
+        7
+      ]
+    },
+    "label-macro": {
+      "source": "7855154",
+      "range_seconds": [
+        8,
+        11
+      ],
+      "crop_source_pixels": [
+        1000,
+        560,
+        2000,
+        1124
+      ],
+      "output_pixels": [
+        1280,
+        720
+      ],
+      "decode_performed": false
+    }
+  }
+}

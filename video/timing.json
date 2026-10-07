@@ -1,0 +1,66 @@
+{
+  "total": 142.36666666666667,
+  "voice_end": 140.76,
+  "scenes": [
+    {
+      "id": "inv-opening",
+      "start": 0,
+      "duration": 10.792166
+    },
+    {
+      "id": "inv-label",
+      "start": 10.792166,
+      "duration": 5.61275
+    },
+    {
+      "id": "inv-observe",
+      "start": 16.404916,
+      "duration": 12.303916999999998
+    },
+    {
+      "id": "inv-context",
+      "start": 28.708833,
+      "duration": 7.573500000000003
+    },
+    {
+      "id": "inv-arrival",
+      "start": 36.282333,
+      "duration": 8.737749999999998
+    },
+    {
+      "id": "inv-packet",
+      "start": 45.020083,
+      "duration": 11.299042
+    },
+    {
+      "id": "inv-compare",
+      "start": 56.319125,
+      "duration": 13.688708000000005
+    },
+    {
+      "id": "inv-frames",
+      "start": 70.007833,
+      "duration": 11.139707999999999
+    },
+    {
+      "id": "inv-head",
+      "start": 81.147541,
+      "duration": 15.183834000000004
+    },
+    {
+      "id": "inv-weak",
+      "start": 96.33137500000001,
+      "duration": 16.421583
+    },
+    {
+      "id": "inv-speed",
+      "start": 112.752958,
+      "duration": 9.301457999999997
+    },
+    {
+      "id": "inv-close",
+      "start": 122.054416,
+      "duration": 20.31225066666667
+    }
+  ]
+}
